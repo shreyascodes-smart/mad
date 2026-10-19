@@ -1,0 +1,501 @@
+MOBILE APPLICATION DEVELOPMENT — VIVA QUESTIONS & ANSWERS
+Last-minute revision | Android Studio | Java + XML
+
+NOTE: This file covers the practicals available in the material shared here: Practical 2, 3, 4, 5, 7 and 8. Practical 1 and Practical 6 were not included in the uploaded material, so their specific viva questions cannot be verified.
+
+============================================================
+PRACTICAL 2 — HELLO WORLD, ANDROID COMPONENTS, AVD
+============================================================
+Q1. What is Android?
+A. Android is an open-source mobile operating system used on phones and tablets.
+
+Q2. What is Android Studio?
+A. An IDE used to create, design, test, debug and run Android apps.
+
+Q3. What is an IDE?
+A. Integrated Development Environment: a toolset for writing, building, testing and debugging software.
+
+Q4. What are the four main Android components?
+A. Activity, Service, Content Provider and Broadcast Receiver.
+
+Q5. What is an Activity?
+A. A component representing a screen and handling its user interface and interaction.
+
+Q6. What is a Service?
+A. A component that performs work without providing its own user interface, such as music playback or background tasks.
+
+Q7. What is a Content Provider?
+A. A component that manages and provides a standard way to access or share data, such as contacts or images.
+
+Q8. What is a Broadcast Receiver?
+A. A component that responds to broadcast messages from Android or other apps.
+
+Q9. What is UI?
+A. User Interface: the visual part through which users interact with an app.
+
+Q10. What is TextView?
+A. A UI component that displays text.
+
+Q11. What is Button?
+A. A clickable UI component used to trigger an action.
+
+Q12. What is EditText?
+A. A UI component that lets users enter text.
+
+Q13. What is ImageView?
+A. A UI component that displays an image.
+
+Q14. What are CheckBox and RadioButton?
+A. CheckBox allows independent selections. RadioButtons are commonly used to select one option from a group.
+
+Q15. What is XML used for in Android?
+A. XML commonly defines layouts and UI elements separately from Java/Kotlin logic.
+
+Q16. What is activity_main.xml?
+A. The layout resource file defining the screen's UI in this practical.
+
+Q17. What is MainActivity.java?
+A. The Java Activity class that controls the screen's behaviour and loads its layout.
+
+Q18. What does setContentView(R.layout.activity_main) do?
+A. It sets activity_main.xml as the Activity's content layout.
+
+Q19. What is an AVD?
+A. Android Virtual Device: an emulator configuration representing a virtual Android device for testing.
+
+Q20. What is an emulator?
+A. Software that runs a simulated Android device on a computer.
+
+Q21. What is a System Image in an AVD?
+A. The Android operating-system image used by the virtual device.
+
+Q22. What is USB Debugging?
+A. It allows a physical Android phone to communicate with Android Studio over USB for installing, running and debugging apps.
+
+Q23. How do you enable Developer Options?
+A. Usually go to About Phone and tap Build Number about seven times. Steps vary by device.
+
+Q24. Difference between AVD and USB Debugging?
+A. AVD is a virtual device on the computer; USB Debugging enables development communication with a physical phone.
+
+Q25. What does match_parent mean?
+A. The view attempts to match the available size of its parent in that dimension.
+
+Q26. What does wrap_content mean?
+A. The view takes the size required by its content, subject to layout constraints.
+
+Q27. What does android:gravity="center" do?
+A. It positions content inside a view/layout toward the centre.
+
+Q28. What does orientation="vertical" do in LinearLayout?
+A. It arranges children one below another.
+
+Q29. What is onCreate()?
+A. An Activity lifecycle callback called when the Activity is created; initial setup is commonly done here.
+
+============================================================
+PRACTICAL 3 — ANDROID PROGRAMMING RESOURCES
+============================================================
+Q1. What are Android Resources?
+A. Files that store text, colors, images, dimensions and styles separately from program code, inside the res folder.
+
+Q2. Why use resources?
+A. They keep an app organised, reusable and easier to maintain.
+
+Q3. Where is colors.xml?
+A. res/values/colors.xml.
+
+Q4. What is colors.xml used for?
+A. It stores named color values.
+
+Q5. What does @color/red mean?
+A. It refers to the color resource named red.
+
+Q6. What is themes.xml?
+A. It defines the app's theme and theme-related appearance.
+
+Q7. What is a theme?
+A. A set of styling attributes controlling the visual appearance of an app or its components.
+
+Q8. Where is strings.xml?
+A. res/values/strings.xml.
+
+Q9. What is strings.xml used for?
+A. It stores reusable text, such as an app name, heading or button label.
+
+Q10. What does @string/welcome mean?
+A. It refers to the string resource named welcome.
+
+Q11. What is Drawable?
+A. A resource type used for graphics, shapes and icons.
+
+Q12. Where are drawable resources stored?
+A. Commonly in res/drawable/.
+
+Q13. Difference between ImageView and Drawable?
+A. ImageView is the view that displays an image; Drawable is the graphic resource that can be displayed.
+
+Q14. What is dimens.xml?
+A. It stores reusable dimensions such as padding, margin, width, height and text size.
+
+Q15. What does @dimen/padding mean?
+A. It references the dimension resource named padding.
+
+Q16. Difference between dp and sp?
+A. dp is commonly used for layout dimensions. sp is commonly used for text size and accounts for user font scaling.
+
+Q17. What does android:textColor="@color/red" do?
+A. It sets the text colour using the red resource.
+
+Q18. What does android:src="@drawable/logo" do?
+A. It sets an ImageView's image source to the drawable named logo.
+
+Q19. Why might a logo not appear?
+A. The image may be missing, the resource name may not match, or the wrong attribute may be used. Use android:src for the runtime image; tools attributes are for editor preview.
+
+Q20. What is a hardcoded string?
+A. Text written directly in layout/code instead of being stored in a reusable string resource.
+
+Q21. Difference between defining and using a resource?
+A. Defining creates its value in a resource file; using it means referencing that value from a layout or code.
+
+============================================================
+PRACTICAL 4 — ACTIVITY LIFECYCLE
+============================================================
+Q1. What is an Activity?
+A. A component representing one screen and managing its UI and interactions.
+
+Q2. What is the Activity Lifecycle?
+A. The stages an Activity passes through as it is created, shown, resumed, paused, stopped, restarted or destroyed.
+
+Q3. Name the seven lifecycle methods in this practical.
+A. onCreate(), onStart(), onResume(), onPause(), onStop(), onRestart() and onDestroy().
+
+Q4. What is onCreate()?
+A. Called when the Activity is created; initialisation and layout loading commonly happen here.
+
+Q5. What is onStart()?
+A. Called when the Activity becomes visible.
+
+Q6. What is onResume()?
+A. Called when the Activity enters the foreground and is ready for interaction.
+
+Q7. What is onPause()?
+A. Called when the Activity loses foreground focus; it may still be partly visible.
+
+Q8. What is onStop()?
+A. Called when the Activity is no longer visible.
+
+Q9. What is onRestart()?
+A. Called when a stopped Activity is about to start again.
+
+Q10. What is onDestroy()?
+A. Called before an Activity is destroyed when that callback occurs. It is not guaranteed if the process is killed abruptly.
+
+Q11. What is a callback method?
+A. A method called by Android at a particular lifecycle stage or event.
+
+Q12. What does super.onCreate(savedInstanceState) do?
+A. It calls the parent Activity's onCreate implementation as part of initialisation.
+
+Q13. What does @Override mean?
+A. It indicates that a method is intended to override an inherited method.
+
+Q14. What does Log.d() do?
+A. It writes a debug message to Logcat.
+
+Q15. What is Logcat?
+A. Android Studio's tool for viewing app logs, diagnostic messages and errors.
+
+Q16. What is a TAG in Log.d(TAG, message)?
+A. A label used to identify and filter related log messages.
+
+Q17. What is Toast?
+A. A short temporary message shown on screen.
+
+Q18. Usual lifecycle order when an Activity opens for the first time?
+A. onCreate() -> onStart() -> onResume().
+
+Q19. What commonly happens when Home is pressed?
+A. The Activity commonly receives onPause() and then onStop() if it becomes fully hidden.
+
+Q20. What happens when a stopped Activity is reopened?
+A. Commonly onRestart() -> onStart() -> onResume().
+
+Q21. Does pressing Home destroy an Activity?
+A. Usually not immediately; it commonly moves to the background.
+
+Q22. Is onDestroy() guaranteed whenever an app closes?
+A. No. The system can terminate a process without calling onDestroy().
+
+Q23. Why use Logcat in this practical?
+A. To observe which lifecycle methods are called during app interactions.
+
+============================================================
+PRACTICAL 5 — ANDROID LAYOUTS
+============================================================
+Q1. What is a Layout?
+A. A ViewGroup that defines how UI elements are arranged.
+
+Q2. What is LinearLayout?
+A. Arranges child views in a single row or column using horizontal or vertical orientation.
+
+Q3. What is RelativeLayout?
+A. Positions views relative to the parent or other views.
+
+Q4. What is TableLayout?
+A. Arranges UI elements into rows and columns, commonly using TableRow.
+
+Q5. What is AbsoluteLayout?
+A. Places views at fixed X/Y coordinates. It is deprecated because fixed positions do not adapt well to different screens.
+
+Q6. What is Coordinate Layout in the practical's terminology?
+A. Positioning UI elements at specific X and Y coordinates.
+
+Q7. What is FrameLayout?
+A. A container that displays views within a frame, including views stacked on top of each other.
+
+Q8. What is ListView?
+A. Displays a collection of items in a vertically scrollable list.
+
+Q9. What is GridView?
+A. Displays items in rows and columns as a two-dimensional grid.
+
+Q10. Difference between ListView and GridView?
+A. ListView shows a vertical list; GridView shows multiple columns and rows.
+
+Q11. What is an Adapter?
+A. It connects a data source to a UI component and supplies views used to display data.
+
+Q12. Why does ListView need an Adapter?
+A. The Adapter supplies the list items in a form that ListView can display.
+
+Q13. What is ArrayAdapter?
+A. An Adapter implementation that displays items from an array or list.
+
+Q14. What does android:numColumns="3" do?
+A. It configures GridView to display three columns.
+
+Q15. What is TableRow?
+A. It represents one row in a TableLayout.
+
+Q16. Difference between padding and margin?
+A. Padding is space inside a view's boundary around its content; margin is space outside the boundary.
+
+Q17. Why is AbsoluteLayout deprecated?
+A. Fixed coordinates may look wrong on different screen sizes and densities.
+
+Q18. Which layout arranges buttons side by side?
+A. A horizontal LinearLayout.
+
+Q19. Which layout can position a view relative to its parent?
+A. RelativeLayout, using attributes such as layout_centerInParent.
+
+Q20. Which layout suits a Name/Age form?
+A. TableLayout can arrange fields in rows and columns.
+
+Q21. Which layout can stack views?
+A. FrameLayout.
+
+Q22. What does ScrollView do?
+A. It provides scrolling for content larger than the visible area and normally has one direct child container.
+
+Q23. What issue can occur when ListView/GridView is inside ScrollView?
+A. Nested scrolling and measurement can behave unexpectedly; test that all content remains accessible.
+
+============================================================
+PRACTICAL 7 — MENUS, DIALOGS AND DIALOG FRAGMENTS
+============================================================
+Q1. What is a Menu?
+A. A UI component displaying options for actions, such as Settings or Exit.
+
+Q2. What is a Dialog?
+A. A small window displayed over the current Activity to show information or request input/confirmation.
+
+Q3. What is AlertDialog?
+A. A dialog that can display a title, message and action buttons.
+
+Q4. What is DialogFragment?
+A. A Fragment designed to display and manage a dialog window.
+
+Q5. Why use DialogFragment?
+A. It provides a reusable dialog interface managed with the Fragment lifecycle and FragmentManager.
+
+Q6. What is AlertDialog.Builder?
+A. It configures an AlertDialog's title, message and buttons.
+
+Q7. What does setTitle() do?
+A. Sets the dialog title.
+
+Q8. What does setMessage() do?
+A. Sets the dialog message.
+
+Q9. What does setPositiveButton() do?
+A. Adds a positive-action button such as Yes or OK, optionally with a click action.
+
+Q10. What does setNegativeButton() do?
+A. Adds a negative-action button such as No or Cancel.
+
+Q11. What does show() do on an AlertDialog.Builder?
+A. It creates and displays the configured AlertDialog.
+
+Q12. What does onCreateOptionsMenu() do?
+A. Creates the Activity's options menu, commonly by inflating a menu resource.
+
+Q13. What does getMenuInflater().inflate(R.menu.main_menu, menu) do?
+A. Loads menu items from main_menu.xml into the Menu object.
+
+Q14. What does onOptionsItemSelected() do?
+A. Handles a selected options-menu item.
+
+Q15. What does item.getItemId() return?
+A. The ID of the selected menu item.
+
+Q16. What does finish() do?
+A. Finishes the current Activity.
+
+Q17. Where should main_menu.xml be stored?
+A. res/menu/main_menu.xml.
+
+Q18. How is a DialogFragment displayed?
+A. Commonly using its show() method with a FragmentManager and a tag.
+
+Q19. Difference between Dialog and DialogFragment?
+A. Dialog is the dialog window; DialogFragment is a Fragment-based component that manages/displays a dialog.
+
+Q20. What is Toast?
+A. A short temporary message used to provide simple feedback.
+
+============================================================
+PRACTICAL 8 — INTENTS, EVENTS, EVENT LISTENERS AND ADAPTERS
+============================================================
+Q1. What is an Intent?
+A. A messaging object used to request an action from an Android component, such as opening an Activity.
+
+Q2. What is an Explicit Intent?
+A. An Intent that names a specific target component, such as SecondActivity.class.
+
+Q3. What is an Implicit Intent?
+A. An Intent describing an action without naming one specific target; Android can find a suitable handler.
+
+Q4. Which Intent opens SecondActivity in this practical?
+A. An Explicit Intent.
+
+Q5. What does new Intent(MainActivity.this, SecondActivity.class) mean?
+A. It creates an Intent targeting SecondActivity from MainActivity.
+
+Q6. What does startActivity(intent) do?
+A. It asks Android to launch the Activity specified by the Intent.
+
+Q7. What is an Event?
+A. An action or occurrence, such as a button click.
+
+Q8. What is an Event Listener?
+A. Code that waits for an event and runs when the event occurs.
+
+Q9. What is setOnClickListener()?
+A. It registers code to respond when a view is clicked.
+
+Q10. What does findViewById() do?
+A. Finds a view in the loaded layout using its resource ID.
+
+Q11. Why is setContentView() usually before findViewById()?
+A. The layout must be loaded before its views can normally be found by ID.
+
+Q12. What is SecondActivity?
+A. The second Activity launched from MainActivity in this practical.
+
+Q13. Why declare SecondActivity in AndroidManifest.xml?
+A. Android needs to know about the Activity component so it can be launched; Android Studio may register it automatically.
+
+Q14. What is ListView?
+A. A UI component displaying items in a vertically scrollable list.
+
+Q15. What is ArrayAdapter?
+A. It connects array/list data to a UI component such as ListView.
+
+Q16. What does android.R.layout.simple_list_item_1 mean?
+A. It refers to Android's built-in single-line text row layout.
+
+Q17. What does listView.setAdapter(adapter) do?
+A. Attaches the Adapter to ListView so data can be displayed.
+
+Q18. Difference between Intent and Event Listener?
+A. An Intent requests an action or component launch; an Event Listener responds to an event such as a button click.
+
+Q19. What happens when Open Second Activity is clicked?
+A. Button click -> OnClickListener runs -> Explicit Intent is created -> startActivity() launches SecondActivity.
+
+Q20. What if the ListView ID in XML does not match Java?
+A. findViewById() may return null, and using it can cause a runtime error.
+
+Q21. What if the layout resource name is wrong?
+A. Compilation may fail or the intended layout may not load.
+
+Q22. Difference between XML and Java in this practical?
+A. XML defines the screen structure; Java connects views, handles clicks, launches Activities and supplies list data.
+
+============================================================
+GENERAL ANDROID STUDIO VIVA
+============================================================
+Q1. What is the res folder?
+A. It stores resources such as layouts, images, strings, colors, dimensions and menus.
+
+Q2. What is the R resource reference?
+A. Android-generated resource identifiers, such as R.layout.activity_main and R.id.btnOpen. Do not manually edit generated R files.
+
+Q3. What is AndroidManifest.xml?
+A. It declares app information and components such as Activities, along with configuration and permissions.
+
+Q4. What is a package name?
+A. It organises Java classes and identifies the app namespace. Code package declarations must match the actual project setup.
+
+Q5. What is Gradle?
+A. The build system used to compile the project, manage dependencies and package the application.
+
+Q6. What is a build error?
+A. An error preventing the project from compiling or packaging successfully.
+
+Q7. What is a runtime error?
+A. An error that occurs while the app is executing and may cause incorrect behaviour or a crash.
+
+Q8. What is debugging?
+A. Finding and fixing problems in code.
+
+Q9. What is a resource ID?
+A. A generated identifier for a view or resource, such as R.id.listView.
+
+Q10. Compile-time error versus runtime error?
+A. Compile-time errors prevent successful compilation; runtime errors occur during execution.
+
+Q11. What does the Run button do?
+A. It builds, installs and launches the app on the selected emulator or connected device.
+
+Q12. What is Logcat used for?
+A. Viewing app logs and diagnostic information.
+
+Q13. Why are Java and XML both used?
+A. XML defines layouts/resources; Java implements behaviour, event handling and application logic.
+
+Q14. Why should Android resource filenames be lowercase?
+A. Android resource naming rules generally require lowercase letters, numbers and underscores, not uppercase letters or spaces.
+
+Q15. What should you check if the app shows a blank/black screen?
+A. Check that the correct Activity launches, setContentView() loads the intended layout, expected views exist, and Logcat has no crash.
+
+============================================================
+LAST-MINUTE ONE-LINE REVISION
+============================================================
+Practical 2: Activity = screen; Service = background work; Content Provider = data access/sharing; Broadcast Receiver = broadcast events; AVD = virtual device; USB Debugging = connect physical phone to Android Studio.
+
+Practical 3: colors.xml = colors; themes.xml = appearance; strings.xml = text; drawable = graphics; dimens.xml = sizes; ImageView = displays an image.
+
+Practical 4: onCreate = create; onStart = visible; onResume = foreground/interactive; onPause = loses focus; onStop = hidden; onRestart = stopped Activity starting again; onDestroy = Activity being destroyed.
+
+Practical 5: Linear = row/column; Relative = relative positioning; Table = rows/columns; Absolute = fixed coordinates and deprecated; Frame = frame/stacked views; ListView = vertical list; GridView = rows/columns; Adapter = data-to-view bridge.
+
+Practical 7: Menu = options; AlertDialog = message/confirmation; DialogFragment = Fragment-managed dialog; onCreateOptionsMenu = create menu; onOptionsItemSelected = handle selection; finish = finish current Activity.
+
+Practical 8: Intent = request action/component; Explicit Intent = named target; Event = action such as click; Listener = responds to event; ArrayAdapter = supplies array items to list; startActivity = launch Activity; setAdapter = connect adapter to ListView.
+
+END OF VIVA REVISION FILE
